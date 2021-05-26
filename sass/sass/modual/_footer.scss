@@ -1,0 +1,189 @@
+footer {
+    box-sizing: border-box;
+    @include clearfix;
+    text-align: left;
+
+    .container {
+        background: #fff;
+        padding-top: 40px;
+    }
+
+    a {
+        text-decoration: none;
+        color: $primaryColor;
+
+        &:hover,
+        &:focus {
+            color: darken($primaryColor, 10);
+        }
+    }
+
+    .footer_top {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 0 60px;
+
+        @include screen('mobile') {
+            @include gutter(60px);
+        }
+
+        @include screen('xs_mobile') {
+            @include gutter(30px);
+        }
+    }
+
+    .footer_logo {
+        flex: 0 1 500px;
+        max-width: 500px;
+        max-height: 60px;
+        margin-bottom: 1em;
+    }
+
+    .footer_info {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        font-size: .875em;
+        color: lighten($importantColor, 15);
+        padding: 0 60px;
+
+        @include screen('mobile') {
+            padding: 0 30px;
+        }
+
+        @include screen('xs_mobile') {
+            @include gutter(30px);
+        }
+
+        p {
+            @include screen('mobile') {
+                flex-basis: 100%;
+            }
+        }
+
+        ul {
+            @include li-reset();
+            display: flex;
+            margin: 1em 0;
+
+            @include screen('mobile') {
+                flex-basis: 100%;
+                
+            }
+
+        }
+
+        li {
+            margin-right: 1em;
+
+            a {
+                color: $importantColor;
+
+                &:hover {
+                    color: $aHover;
+                }
+            }
+        }
+    }
+
+    .footer_icon {
+        flex: 0 1 200px;
+
+        @include screen('tablet') {
+            flex: 1 1 100%;
+            text-align: right;
+        }
+    }
+
+    .footer_link {
+        font-size: .938em;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        @include li-reset();
+        @include clearfix();
+
+        @include screen('mobile') {
+            
+        }
+
+        li {
+            flex: 0 1 auto;       
+
+            a {
+                display: block;
+                padding: .5em 1em;
+                color: $importantColor;
+                transition: all .3s ease-out;
+                font-weight: bold;
+                white-space: nowrap;
+                position: relative;
+
+                &:hover,
+                &:focus {
+                    color: $aHover;
+                }
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: calc(50% - 1px);
+                    left: 0;
+                    display: block;
+                    width: 6px;
+                    height: 2px;
+                    background: $secondaryColor;
+                }
+            }
+        }
+    }
+
+    .Copyright {
+        background: $importantColor;
+        color: #fff;
+        font-size: .8125em;
+        text-align: center;
+        padding: 1em;
+    }
+
+    p {
+        line-height: 1.65em;
+    }
+
+    // .update,
+    // .counter {
+    //     display: inline-block;
+    //     margin-right: 5px;
+    //     em {
+    //         font-style: normal;
+    //         color: $primaryColor;
+    //         padding: 0 .5em;
+    //     }
+    // }
+    .footer_icon {
+        a {
+            display: inline-block;
+            vertical-align: top;
+            position: relative;
+
+            &:focus {
+                &:after {
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    box-shadow: 0px 0px 0px 1px $aHover inset;
+                    z-index: 99;
+                }
+            }
+        }
+
+        img {
+            max-width: 120px;
+        }
+    }
+}
