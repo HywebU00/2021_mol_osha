@@ -1,20 +1,46 @@
 .accordion {
     ul {
-        list-style: none;
+        @include li-reset;
         li {
             margin-bottom: 0.5em;
             a {
+                position: relative;
                 display: block;
-                background-color: #21baff;
-                color: #fff;
+                background-color: $color-lightgray;
+                color: $color-word;
                 text-decoration: none;
-                padding: 5px;
+                padding: .8em 1em .8em 2.8em;
+                &:hover, &:focus{
+                    color: $primaryColor;
+                }
+                &:before{
+                    content:"";
+                    position: absolute;
+                    left: 1em;
+                    top: calc(50% - 10px);
+                    display: block;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 30px;
+                    background: $secondaryColor url(../images/icon/icon_add2.svg) no-repeat center;
+                    background-size: 12px;
+                }
+                &.active{
+                    color: $primaryColor;
+                    &:before{
+                        background: $primaryColor url(../images/icon/icon_minus2.svg) no-repeat center;
+                        background-size: 12px;
+                    }
+                }
             }
         }
     }
     .accordion-content {
-        line-height: 1.45em;
-        padding: 5px 0;
+        line-height: 1.5em;
+        padding: .8em 1em;
+        img{
+            margin: .5em 0;
+        }
     }
 }
 // 
