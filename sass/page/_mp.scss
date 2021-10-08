@@ -244,9 +244,20 @@ a.more {
             margin-bottom: 3em;
             line-height: 1.8;
             text-shadow: 0 0 7px rgba(0, 0, 0, .15);
+            font-weight: bold;
 
             @include screen('tablet') {
                 margin-bottom: 1.5em;
+            }
+
+            >a {
+                color: $color-word-2;
+                text-shadow: 0 0 7px rgba(255, 255, 255, .15);
+
+                &:hover {
+                    color: $aHover;
+                    text-decoration: underline;
+                }
             }
 
         }
@@ -451,34 +462,36 @@ a.more {
             margin: 1em 0;
         }
 
-        &:nth-of-type(3n+1) {
-            a {
-                background: url(../images/s_banner_1.jpg) center right no-repeat;
-                background-size: cover;
-            }
-        }
+        // &:nth-of-type(3n+1) {
+        //     a {
+        //         background: url(../images/s_banner_1.jpg) center right no-repeat;
+        //         background-size: cover;
+        //     }
+        // }
 
-        &:nth-of-type(3n+2) {
-            a {
-                background: url(../images/s_banner_2.jpg) center right no-repeat;
-                background-size: cover;
-            }
-        }
+        // &:nth-of-type(3n+2) {
+        //     a {
+        //         background: url(../images/s_banner_2.jpg) center right no-repeat;
+        //         background-size: cover;
+        //     }
+        // }
 
-        &:nth-of-type(3n+3) {
-            a {
-                background: url(../images/s_banner_3.jpg) center right no-repeat;
-                background-size: cover;
-            }
-        }
+        // &:nth-of-type(3n+3) {
+        //     a {
+        //         background: url(../images/s_banner_3.jpg) center right no-repeat;
+        //         background-size: cover;
+        //     }
+        // }
     }
 
     a {
         display: flex;
         align-items: center;
+        justify-content: center;
+        text-align: center;
         background-color: $importantColor;
         width: 210px;
-        min-height: 68px;
+        min-height: 80px;
         color: #fff;
         margin: 0 auto;
         padding: 1em 1.5em;
@@ -774,5 +787,21 @@ a.more {
         font-size: 1.125em;
         font-weight: bold;
         margin-bottom: .5em;
+
+        .remarks {
+            display: block;
+            font-size: .875em;
+            color: $color-word-2;
+        }
+    }
+
+    a {
+        color: $importantColor;
+        font-weight: bold;
+
+        &:hover {
+            color: $aColor;
+            text-decoration: underline;
+        }
     }
 }

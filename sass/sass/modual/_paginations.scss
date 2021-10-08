@@ -162,7 +162,9 @@
             font-weight: bold;
             border-radius: 4px;
             color: $importantColor;
-            &:hover, &:focus{
+            &:hover, 
+            &:focus,
+            &.active{
                 background: $primaryColor;
                 color: #fff;
             }

@@ -110,10 +110,15 @@
 
             }
             .list_title{
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
+                // white-space: nowrap;
+                // overflow: hidden;
+                // text-overflow: ellipsis;
                 font-weight: bold;
+            }
+            .new_img{
+                width: 32px;
+                margin-left: .3em;
+                vertical-align: middle;
             }
         }
     }
