@@ -1,4 +1,5 @@
-.modal {
+.modal, 
+.modal2 {
     position: fixed;
     display: none;
     width: 600px;
@@ -13,11 +14,12 @@
     border-radius:8px;
     box-shadow:1px 1px 15px RGBA(0, 0, 0, .5);
     animation: scaleUp .5s ease-out;
-    h2 {
-        border-bottom: 1px solid $primaryColor;
-        padding-bottom: .5em;
-    }
-    .close {
+    // h2 {
+    //     border-bottom: 1px solid $primaryColor;
+    //     padding-bottom: .5em;
+    // }
+    .close, 
+    .close2 {
         position: absolute;
         top: 5px;
         right: 5px;
@@ -36,8 +38,29 @@
     .photo_container{
         margin-top: 30px;
         max-height: 500px;
+        border: 1px solid $color-gray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
         img{
             object-fit: contain;
+        }
+    }
+    .form_grp{
+        margin-top: 30px;
+        label{
+            font-weight: bold;
+            background: $secondaryColor;
+            padding: .5em;
+            color: $color-word;
+            margin-bottom: .5em;
+            display: block;
+            border-radius: 2px;
+        }
+        textarea{
+            height: 200px;
+            margin: 0;
         }
     }
 }

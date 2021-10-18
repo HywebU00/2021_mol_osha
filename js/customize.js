@@ -190,3 +190,24 @@ $(function() {
     $(".modal_overlay").click(closeModal);
     $(".modal .close").click(closeModal);
 });
+
+$(function() {
+    $('#modal2').hide();
+    $('.modal2').after('<div class="modal_overlay"></div>');
+    $(".modal2").prepend('<button type="button" class="close2">關閉</button>');
+    $('.modal_overlay').hide();
+    $('.openModal2').click(function(e) {
+        $('.modal_overlay2').fadeIn(100);
+        $('.modal2').fadeIn(100);
+        $('body').addClass('noscroll');
+        e.preventDefault();
+    });
+
+    function closeModal() {
+        $('#modal2').hide();
+        $('.modal_overlay2').hide();
+        $('body').removeClass('noscroll');
+    }
+    $('.modal_overlay2').click(closeModal);
+    $('.modal2 .close2').click(closeModal);
+});
